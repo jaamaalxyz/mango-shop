@@ -44,3 +44,7 @@ npm start
 ```
 
 - Open your favourite browser and browse to `http://localhost:7070`
+
+### Credit
+Inspired by - [Methusael Murmu](https://github.com/methusael13/resume-builder) and [Vipin Yadav](https://github.com/imvpn22/resume)
+another inspiration [Sebastian Hanula](https://github.com/hanula/resume)
