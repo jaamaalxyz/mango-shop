@@ -1,0 +1,15 @@
+{
+	"name": "my-resume-builder",
+	"version": "0.0.1",
+	"description": "CV Template",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Md. Jamal Uddin",
+	"license": "ISC",
+	"dependencies": {
+		"ejs": "^2.5.7",
+		"express": "^4.15.4"
+	}
+}
