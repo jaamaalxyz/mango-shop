@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Cart from "./pages/Cart";
 import Wishlist from "./pages/Wishlist";
 import { Switch, Route } from "react-router-dom";
+import "./style.css";
 
 function App() {
   return (
