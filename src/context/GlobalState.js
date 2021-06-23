@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 
-// context
+// creating `context`
 const StateContext = React.createContext();
 
-const StateProvider = ({ children }) => {
-  // set context for products, cartItems, total, totalItems, and favoriteItems
+function StateProvider({ children }) {
+  // defining `state` for our product data
   const [products, setProducts] = useState([]);
+  // defining `state` for our cart data
   const [cartItems, setCartItems] = useState([]);
+  // defining `state` for calculating total amount
   const [total, setTotal] = useState(0);
+  // defining `state` for counting total items in
   const [totalItems, setTotalItems] = useState(0);
+  // defining `state` for favorite product data
   const [favoriteItems, setFavoriteItems] = useState([]);
-  // https://api.unsplash.com/search/photos?query=flower&client_id=process.env.ACCESS_KEY
 
   // fetching product data
   const url =
-    "https://raw.githubusercontent.com/jaamaal95/anabia/master/assets/react-shop-data/data.json";
+    "https://raw.githubusercontent.com/jaamaal95/react-shop-data/master/data.json";
 
   useEffect(() => {
     fetch(url)
@@ -24,16 +27,16 @@ const StateProvider = ({ children }) => {
   }, []);
 
   // calculate cart quantity
-  const calcQuantity = () => {
+  function calcQuantity() {
     const totalQty = cartItems.reduce(
       (total, product) => total + product.quantity,
       0
     );
     setTotalItems(totalQty);
-  };
+  }
 
   // addToCart button functionality
-  const addToCart = (product) => {
+  function addToCart(product) {
     // check if the newly added product is already in cart by getting it's index
     const index = cartItems.findIndex((item) => item.id === product.id);
     // if index not found push it to cart & set quantity to 1 else update the quantity only
@@ -44,55 +47,55 @@ const StateProvider = ({ children }) => {
     }
     // update cart quantity
     calcQuantity();
-  };
+  }
 
   // removeFromCart button functionality
-  const removeFromCart = (product) => {
+  function removeFromCart(product) {
     // remove product from cart
     cartItems.pop(product);
     // update cart quantity
     calcQuantity();
-  };
+  }
 
   // counter increase button functionality
-  const increaseCount = (id) => {
+  function increaseCount(id) {
     // check if the newly added product is already in cart by getting it's index
     const index = cartItems.findIndex((item) => item.id === id);
     // increase the quantity by 1
     cartItems[index].quantity += 1;
     // update cart quantity
     calcQuantity();
-  };
+  }
 
   // counter decrease button functionality
-  const decreaseCount = (id) => {
+  function decreaseCount(id) {
     // check if the newly added product is already in cart by getting it's index
     const index = cartItems.findIndex((item) => item.id === id);
     // decrease the quantity by 1
     cartItems[index].quantity -= 1;
     // update cart quantity
     calcQuantity();
-  };
+  }
 
   // addToFavorite button functionality
-  const addToFavorite = (newItem) => {
+  function addToFavorite(newItem) {
     setFavoriteItems((prevItems) => [...prevItems, newItem]);
-  };
+  }
 
   // removeFromFavorite button functionality
-  const removeFromFavorite = (id) => {
+  function removeFromFavorite(id) {
     setFavoriteItems((prevItems) => prevItems.filter((item) => item.id !== id));
-  };
+  }
 
-  const resetCart = () => {
+  function resetCart() {
     setCartItems([]);
     setTotalItems(0);
-  };
+  }
 
-  const checkOutCart = () => {
+  function checkOutCart() {
     resetCart();
-    Swal.fire("Congrats!", "You have successfully placed an order!", "success");
-  };
+    Swal.fire("Congrats!", "You successfully placed an order!", "success");
+  }
 
   useEffect(() => {
     // calculate total bill
@@ -123,6 +126,6 @@ const StateProvider = ({ children }) => {
       {children}
     </StateContext.Provider>
   );
-};
+}
 
 export { StateContext, StateProvider };

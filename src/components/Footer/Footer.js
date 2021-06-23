@@ -5,9 +5,9 @@ function Footer() {
   return (
     <footer>
       <p>
-        Copyright &copy; {new Date().getFullYear()} An Online Store | Built with{" "}
+        Copyright &copy; {new Date().getFullYear()} Online Store | Built with{" "}
         <a href="http://reactjs.org" target="_blank" rel="noreferrer">
-          ReactJs
+          React.js
         </a>
       </p>
     </footer>

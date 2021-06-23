@@ -11,7 +11,7 @@ function Header() {
   return (
     <nav>
       <div className="logo">
-        <Link to="/">Island Tees</Link>
+        <Link to="/">React Shop</Link>
       </div>
       <ul className="nav-items">
         <li>
