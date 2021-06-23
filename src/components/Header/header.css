@@ -1,6 +1,6 @@
 nav {
-  background: black;
-  width: 80%;
+  background: rgb(233, 110, 9);
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@ li {
 
 .logo {
   font-family: "Redressed", cursive;
-  font-size: 25px;
+  font-size: 38px;
   flex: 1 1;
 }
 
@@ -41,8 +41,8 @@ nav a {
 }
 
 nav a:hover {
-  color: black;
-  background: white;
+  color: #0591af;
+  background: #f0c993;
   transition: 0.3s;
 }
 

@@ -1,8 +1,24 @@
 footer {
   display: flex;
+  background-color: #f28500;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 30px 0 30px 0;
 }
+
+footer > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > section > h2 {
+  font-family: "Redressed", cursive;
+  color: #fff;
+  margin-left: 10px;
+}
+
 footer > p {
-  font-weight: 100;
-  font-size: 14px;
+  font-size: 16px;
 }

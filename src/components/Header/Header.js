@@ -3,6 +3,8 @@ import { StateContext } from "../../context/GlobalState";
 import { Link } from "react-router-dom";
 import "./header.css";
 
+const MangoImage = process.env.PUBLIC_URL + "/favicon-32x32.png";
+
 function Header() {
   // consuming context
   const { totalItems, favoriteItems } = useContext(StateContext);
@@ -11,7 +13,9 @@ function Header() {
   return (
     <nav>
       <div className="logo">
-        <Link to="/">React Shop</Link>
+        <Link to="/">
+          <img src={MangoImage} alt="mango shop" /> Mango Shop
+        </Link>
       </div>
       <ul className="nav-items">
         <li>

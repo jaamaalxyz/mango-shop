@@ -6,7 +6,7 @@
 .product-card {
   margin: 1.5%;
   flex-grow: 1; /* consume the remaining white space */
-  flex-basis: 30%; /* set initial width */
+  flex-basis: 20%; /* set initial width */
   padding: 20px 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
   border-radius: 6px;
@@ -20,6 +20,7 @@
 }
 
 .product-info {
+  color: #f28500;
   text-align: center;
 }
 
@@ -50,18 +51,18 @@
 
 .add-cart-btn,
 .checkout {
-  background: black;
+  background: #f28500;
   color: white;
   font-size: 12px;
   padding: 10px;
   text-transform: uppercase;
-  border: 2px solid black;
+  border: 2px solid #0591af;
   margin: 5px;
 }
 
 .add-cart-btn:hover {
-  background: white;
-  color: black;
+  background: #0591af;
+  color: #eee8e0;
   border: 2px solid black;
   opacity: 0.6;
   transition: 0.3s;
@@ -86,12 +87,12 @@
   font-size: 12px;
   padding: 10px;
   text-transform: uppercase;
-  border: 2px solid black;
+  border: 2px solid #0591af;
   margin: 5px;
 }
 
 .view-detail-btn:hover {
-  background: black;
+  background: #f28500;
   color: white;
   opacity: 0.6;
   transition: 0.3s;
