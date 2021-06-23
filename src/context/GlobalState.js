@@ -18,7 +18,7 @@ function StateProvider({ children }) {
 
   // fetching product data
   const url =
-    "https://raw.githubusercontent.com/jaamaal95/react-shop-data/master/data.json";
+    "https://raw.githubusercontent.com/jaamaal95/anabia/master/assets/react-shop-data/data.json";
 
   useEffect(() => {
     fetch(url)
@@ -94,7 +94,7 @@ function StateProvider({ children }) {
 
   function checkOutCart() {
     resetCart();
-    Swal.fire("Congrats!", "You successfully placed an order!", "success");
+    Swal.fire("Congrats!", "You have successfully placed an order!", "success");
   }
 
   useEffect(() => {
