@@ -14,7 +14,7 @@
 }
 
 .product-image img {
-  max-width: 100%;
+  max-width: 70%;
   margin: 0 auto;
   display: flex; /* block level display */
 }
@@ -63,6 +63,8 @@
   background: white;
   color: black;
   border: 2px solid black;
+  opacity: 0.6;
+  transition: 0.3s;
 }
 
 .remove-cart-btn {
@@ -91,6 +93,8 @@
 .view-detail-btn:hover {
   background: black;
   color: white;
+  opacity: 0.6;
+  transition: 0.3s;
 }
 
 .view-detail-btn a {

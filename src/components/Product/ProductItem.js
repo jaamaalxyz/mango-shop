@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { StateContext } from "../../context/GlobalState";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazyload";
 
 function ProductItem({ product }) {
   // consuming contexts
@@ -43,28 +44,30 @@ function ProductItem({ product }) {
   // render JSX
   return (
     <div key={product.id} className="product-card">
-      <div className="product-image">
-        {/* product image */}
-        <img src={product.url} alt="product" />
-      </div>
-      <div className="product-info">
-        {/* product title */}
-        <h5>{product.title}</h5>
+      <LazyLoad height={200}>
+        <div className="product-image">
+          {/* product image */}
+          <img src={product.url} alt="product" />
+        </div>
+        <div className="product-info">
+          {/* product title */}
+          <h5>{product.title}</h5>
 
-        {/* product price */}
-        <h6>$ {product.price}</h6>
+          {/* product price */}
+          <h6>$ {product.price}</h6>
 
-        {/* favorite button */}
-        {favoriteButton()}
+          {/* favorite button */}
+          {favoriteButton()}
 
-        {/* cart button */}
-        {cartButton()}
+          {/* cart button */}
+          {cartButton()}
 
-        {/* detail button */}
-        <Link to={`/product/${product.id}`}>
-          <button className="view-detail-btn">View Details</button>
-        </Link>
-      </div>
+          {/* detail button */}
+          <Link to={`/product/${product.id}`}>
+            <button className="view-detail-btn">View Details</button>
+          </Link>
+        </div>
+      </LazyLoad>
     </div>
   );
 }
