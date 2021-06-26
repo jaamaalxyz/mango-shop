@@ -20,7 +20,8 @@
 }
 
 .product-info {
-  color: #f28500;
+  /* color: #f28500; */
+  color: #078c6e;
   text-align: center;
 }
 
@@ -51,7 +52,8 @@
 
 .add-cart-btn,
 .checkout {
-  background: #f28500;
+  /* background: #f28500; */
+  background-color: #078c6e;
   color: white;
   font-size: 12px;
   padding: 10px;
@@ -61,7 +63,7 @@
 }
 
 .add-cart-btn:hover {
-  background: #0591af;
+  background: #078c6e;
   color: #eee8e0;
   border: 2px solid black;
   opacity: 0.6;
@@ -82,17 +84,17 @@
 
 .view-detail-btn,
 .reset {
-  background: white;
-  color: black;
+  background: #8d0726;
+  color: #fff;
   font-size: 12px;
   padding: 10px;
   text-transform: uppercase;
-  border: 2px solid #0591af;
+  border: 2px solid #078c6e;
   margin: 5px;
 }
 
 .view-detail-btn:hover {
-  background: #f28500;
+  background-color: #078c6e;
   color: white;
   opacity: 0.6;
   transition: 0.3s;
@@ -111,7 +113,7 @@
 }
 
 .ri-heart-fill {
-  color: red;
+  color: #8d0726;
 }
 
 @media (max-width: 780px) {

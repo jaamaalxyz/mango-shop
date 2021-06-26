@@ -1,5 +1,6 @@
 nav {
-  background: rgb(233, 110, 9);
+  /* background: rgb(233, 110, 9); */
+  background-color: #078c6e;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -41,8 +42,8 @@ nav a {
 }
 
 nav a:hover {
-  color: #0591af;
-  background: #f0c993;
+  color: #078c6e;
+  background: #8d0726;
   transition: 0.3s;
 }
 
