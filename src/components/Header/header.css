@@ -30,8 +30,13 @@ li {
 
 .logo {
   font-family: "Redressed", cursive;
-  font-size: 38px;
-  flex: 1 1;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.logo > a {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -50,4 +55,10 @@ nav a:hover {
 .item-count {
   margin-top: -6px;
   position: absolute;
+}
+
+@media (max-width: 480px) {
+  #logo-text {
+    display: none;
+  }
 }

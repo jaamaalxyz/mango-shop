@@ -13,6 +13,24 @@ button {
 }
 
 .about-page {
-  text-align: center;
-  margin: 80px 0;
+  display: flex;
+  height: 70vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-section {
+  position: relative;
+  top: 20px;
+}
+
+@media (max-width: 480px) {
+  .summary-detail {
+    width: 90%;
+  }
+
+  .wishlist-section {
+    padding: 10px;
+  }
 }

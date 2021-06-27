@@ -14,7 +14,8 @@ function Header() {
     <nav>
       <div className="logo">
         <Link to="/">
-          <img src={MangoImage} alt="mango shop" /> Mango Shop
+          <img src={MangoImage} alt="mango shop" />{" "}
+          <span id="logo-text">Mango Shop</span>
         </Link>
       </div>
       <ul className="nav-items">

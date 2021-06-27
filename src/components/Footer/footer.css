@@ -1,6 +1,5 @@
 footer {
   display: flex;
-  /* background-color: #f28500; */
   background-color: #078c6e;
   color: #fff;
   flex-direction: column;
@@ -22,8 +21,11 @@ footer > section > h2 {
 
 footer > p {
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  line-height: 2em;
 }
 
-footer > p > a {
+footer > p > span > a {
   color: #fff;
 }

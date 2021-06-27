@@ -11,14 +11,12 @@ function Footer() {
         <h2>Mango Shop</h2>
       </section>
       <p>
-        Developed with &#129505; by <a href="http://">Md. Jamal Uddin</a>
-      </p>
-      <p>
-        Copyright &copy; {new Date().getFullYear()} Online Mango Store | Built
-        with{" "}
-        <a href="http://reactjs.org" target="_blank" rel="noreferrer">
-          React.js
-        </a>
+        <span>
+          Developed with &#129505; by <a href="http://">Md. Jamal Uddin</a>
+        </span>
+        <span>
+          Copyright &copy; {new Date().getFullYear()} - Online Mango Store
+        </span>
       </p>
     </footer>
   );
