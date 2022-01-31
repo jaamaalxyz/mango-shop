@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
-import { StateContext } from "../../context/GlobalState";
 import { Link } from "react-router-dom";
+import { StateContext } from "../../context/GlobalState";
 import "./header.css";
 
 const MangoImage = process.env.PUBLIC_URL + "/favicon-32x32.png";
 
 function Header() {
   // consuming context
+  // @ts-ignore
   const { totalItems, favoriteItems } = useContext(StateContext);
 
   // render JSX

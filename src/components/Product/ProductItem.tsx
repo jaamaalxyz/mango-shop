@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
-import { StateContext } from "../../context/GlobalState";
-import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
+import { StateContext } from "../../context/GlobalState";
 
+// @ts-ignore
 function ProductItem({ product }) {
   // consuming contexts
+  // @ts-ignore
   const { addToCart, favoriteItems, addToFavorite, removeFromFavorite } =
     useContext(StateContext);
 
@@ -21,6 +23,7 @@ function ProductItem({ product }) {
   function favoriteButton() {
     // check which product is already favorited
     const alreadyFavorited = favoriteItems.some(
+      // @ts-ignore
       (item) => item.id === product.id
     );
 

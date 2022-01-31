@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
-import { StateContext } from "../../context/GlobalState";
 import { Link } from "react-router-dom";
+import { StateContext } from "../../context/GlobalState";
 import "./favoriteitem.css";
 
+// @ts-ignore
 function FavoriteItem({ item }) {
   // consuming contexts
+  // @ts-ignore
   const { removeFromFavorite } = useContext(StateContext);
 
   // render JSX

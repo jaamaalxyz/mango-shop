@@ -4,6 +4,7 @@ import { StateContext } from "../context/GlobalState";
 
 function Cart() {
   // consuming contexts
+  // @ts-ignore
   const { total, cartItems, totalItems, resetCart, checkOutCart } =
     useContext(StateContext);
 
@@ -11,6 +12,7 @@ function Cart() {
   return (
     <>
       <section className="cart-section">
+        {/* @ts-ignore */}
         {cartItems.map((item) => (
           <CartItem key={item.id} item={item} />
         ))}

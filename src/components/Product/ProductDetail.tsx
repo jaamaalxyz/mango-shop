@@ -1,24 +1,29 @@
 import React, { useContext } from "react";
-import { StateContext } from "../../context/GlobalState";
 import { useParams } from "react-router-dom";
+import { StateContext } from "../../context/GlobalState";
 
 function ProductDetail() {
   // consuming contexts
+  // @ts-ignore
   const { addToCart } = useContext(StateContext);
 
   // get id of current product
+  // @ts-ignore
   const { productId } = useParams();
 
   // fetch all products data
+  // @ts-ignore
   const { products } = useContext(StateContext);
 
   // filter the product with matching id
+  // @ts-ignore
   const thisProduct = products.filter((product) => product.id === productId);
 
   // render JSX
   return (
     // map all information of that specific product
     <section>
+      {/* @ts-ignore */}
       {thisProduct.map((product) => {
         return (
           <div key={product.id} className="product-detail">

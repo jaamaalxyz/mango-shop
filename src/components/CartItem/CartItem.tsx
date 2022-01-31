@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import { StateContext } from "../../context/GlobalState";
 import "./cartitem.css";
 
+// @ts-ignore
 function CartItem({ item }) {
   // consuming contexts
+  // @ts-ignore
   const { increaseCount, decreaseCount, removeFromCart } =
     useContext(StateContext);
 
