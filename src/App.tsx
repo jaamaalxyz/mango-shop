@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import ProductDetail from "./components/Product/ProductDetail";
@@ -13,29 +13,14 @@ function App() {
   return (
     <div>
       <Header />
-
-      <Switch>
-        <Route exact path="/">
-          <Store />
-        </Route>
-
-        <Route path="/about">
-          <About />
-        </Route>
-
-        <Route path="/cart">
-          <Cart />
-        </Route>
-
-        <Route path="/wishlist">
-          <Wishlist />
-        </Route>
-
-        <Route path="/product/:productId">
-          <ProductDetail />
-        </Route>
-      </Switch>
-
+      <Routes>
+        {/* @ts-ignore */}
+        <Route index path="/" element={<Store />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/product/:productId" element={<ProductDetail />} />
+      </Routes>
       <Footer />
     </div>
   );
